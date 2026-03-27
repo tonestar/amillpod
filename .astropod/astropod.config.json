@@ -1,23 +1,22 @@
 {
-  "copyright": "",
+  "copyright": "Kim Riddlebarger",
   "theme": "light",
   "fundingText": "",
-  "author": "Author's name",
-  "name": "Podcast Name",
+  "author": "Kim Riddlebarger",
+  "name": "Amillenialism with Kim Riddlebarger",
   "banner": "/banner.webp",
   "pageSize": 15,
   "fundingUrl": "",
-  "owner": "",
+  "owner": "Kim Riddlebarger",
   "favicon": "/favicon.svg",
   "explicit": false,
   "cover": "/cover.jpg",
   "language": "en",
-  "link": "https://your-website-url.netlify.app",
-  "email": "your.email@gmail.com",
-  "description": "A short description of your podcast. We suggest creating a podcast description between 600-900 characters or 120-170 words in length.",
+  "link": "https://amillpod.netlify.app",
+  "email": "tonymcbony@gmail.com",
+  "description": "Teaching series on Amillennialism by Kim Riddlebarger, exploring the Reformed and confessional understanding of eschatology, biblical prophecy, and the kingdom of God.",
   "category": [
-    "Technology",
-    "Business"
+    "Religion & Spirituality"
   ],
   "feedSize": ""
 }

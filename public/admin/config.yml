@@ -6,3 +6,41 @@ backend:
 publish_mode: editorial_workflow
 media_folder: "public/uploads" # Media will be stored in the repo under public/uploads
 public_folder: "/uploads" # The src attribute for uploaded media
+
+collections:
+  - name: "episodes"
+    label: "Episodes"
+    label_singular: "Episode"
+    folder: "src/content/episode"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    sortable_fields: ["title", "pubDate", "episode", "season"]
+    fields:
+      - { name: "title", widget: "string", label: "Episode Title" }
+      - { name: "audioUrl", widget: "string", label: "Audio URL" }
+      - { name: "pubDate", widget: "date", label: "Publish Date", format: "DD MMM YYYY", required: false }
+      - { name: "duration", widget: "string", label: "Duration (hh:mm:ss or mm:ss)", pattern: ["^(?:[01]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9]$|^[0-5]?[0-9]:[0-5]?[0-9]$", "Must have format hh:mm:ss or mm:ss"] }
+      - { name: "size", widget: "number", label: "Size (MB)", value_type: "float" }
+      - { name: "cover", widget: "string", label: "Custom Cover URL", required: false }
+      - { name: "explicit", widget: "boolean", label: "Explicit", required: false, default: false }
+      - { name: "episode", widget: "number", label: "Episode Number", required: false }
+      - { name: "season", widget: "number", label: "Season", required: false }
+      - name: "episodeType"
+        widget: "select"
+        label: "Episode Type"
+        default: "full"
+        options:
+          - { label: "Full", value: "full" }
+          - { label: "Trailer", value: "trailer" }
+          - { label: "Bonus", value: "bonus" }
+      - name: "category"
+        widget: "select"
+        label: "Category"
+        required: false
+        options:
+          - { label: "Sermon", value: "sermon" }
+          - { label: "Seminar", value: "seminar" }
+      - { name: "series", widget: "string", label: "Series", required: false }
+      - { name: "speaker", widget: "string", label: "Speaker", required: false }
+      - { name: "body", widget: "markdown", label: "Description", required: false }
